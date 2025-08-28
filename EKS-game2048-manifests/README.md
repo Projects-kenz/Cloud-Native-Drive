@@ -1,3 +1,7 @@
+# GAME-2048 Deployment on EKS (Using Fargate)
+<img width="1918" height="1078" alt="Screenshot 2025-08-27 200123" src="https://github.com/user-attachments/assets/c79d9d7e-dc1b-495a-b2b4-bd01814ebae3" />
+
+  
 # PREREQUISITES:
 -kubectl  
 -AWS cli  
@@ -32,7 +36,7 @@ eksctl utils associate-iam-oidc-provider --cluster my-proj-cluster --approve
 #Since ALB controller (k8s cluster) need to access Application Load Balancer of AWS account)  
 
 
-# CREATE IAM POLICY & ROLE FOR ALB TO CREATE ALB AND CONFIGURE TARGET GROUP etc..:
+# Create IAM Policy & Role for ALB Controller to create ALB AND CONFIGURE TARGET GROUP etc..:
 ## policy:  
 download: curl -O https://raw.githubusercontent.com/kubernetes-sigs/aws-load-balancer-controller/v2.13.3/docs/install/iam_policy.json  
 
@@ -41,7 +45,7 @@ create iam-policy: aws iam create-policy \
     --policy-document file://iam_policy.json  
 
 ## create service account and attach the policy/role:
-### create service account by explicitly stating role name for better control over roles  
+#### create service account by explicitly stating role name for better control over roles  
 eksctl create iamserviceaccount \
   --cluster=<your-cluster-name> \
   --namespace=kube-system \
@@ -50,7 +54,7 @@ eksctl create iamserviceaccount \
   --attach-policy-arn=arn:aws:iam::<your-aws-account-id>:policy/AWSLoadBalancerControllerIAMPolicy \
   --approve  
   
-### create service account and let eksctl auto generate rolename also includes "--override-existing-serviceaccounts"
+#### create service account and let eksctl auto generate rolename also includes "--override-existing-serviceaccounts"
 eksctl create iamserviceaccount \
     --cluster=<cluster-name> \
     --namespace=kube-system \
@@ -64,7 +68,7 @@ Use the first one if you want predictable, named IAM roles (recommended for prod
 Use the second one if you just want a quick setup and don’t care about the IAM role name (common for test/dev clusters).  
 
 
-# INSTALL LoadBalancer Controller
+# Install LoadBalancer Controller
 Add Repo: helm repo add eks https://aws.github.io/eks-charts  
   
 helm upgrade --install aws-load-balancer-controller eks/aws-load-balancer-controller -n kube-system \
@@ -72,6 +76,12 @@ helm upgrade --install aws-load-balancer-controller eks/aws-load-balancer-contro
   --set serviceAccount.create=false \
   --set serviceAccount.name=aws-load-balancer-controller \
   --set region=us-east-1 \
-  --set vpcId=vpc-0ee8e314591b20234  
+  --set vpcId=vpc-0ee8e314591b20234 
+
+
+    
   
+  
+
+
   
