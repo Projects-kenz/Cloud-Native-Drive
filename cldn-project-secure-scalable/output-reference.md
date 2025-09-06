@@ -58,15 +58,25 @@ Designed for high availability, modular scaling, and least privilege access.
 Includes ALB listener rules, DNS endpoints, and target group health status.  
 Demonstrates traffic routing across healthy EC2 instances in private subnets.  
 
-
-<img width="1000" alt="Screenshot 2025-09-05 233425LB-listeners" src="https://github.com/user-attachments/assets/ba3e83aa-bb98-4bd6-a018-94c958377798" />  
-
   
-<img width="1000" alt="Screenshot 2025-09-05 233518ALB-TG" src="https://github.com/user-attachments/assets/c371d7c0-be07-4bcf-9eb7-582b34ad4b9f" />  
 
+### Listeners  
+  
+<img width="1000" alt="Screenshot 2025-09-05 233425LB-listeners" src="https://github.com/user-attachments/assets/ba3e83aa-bb98-4bd6-a018-94c958377798" />  
+  
+
+### Target Group  
+
+<img width="1000" alt="Screenshot 2025-09-05 233518ALB-TG" src="https://github.com/user-attachments/assets/c371d7c0-be07-4bcf-9eb7-582b34ad4b9f" />  
+  
+
+### ALB-Resourcemap  
+  
   
 <img width="1000" alt="Screenshot 2025-09-05 233616ALB-Resourcemap" src="https://github.com/user-attachments/assets/197c2a52-ef10-42c3-aed9-3624f9433090" />  
+  
 
+  
   
 
 ---
@@ -77,13 +87,14 @@ Covers launch template parameters, scaling limits, health checks, and subnet map
 Designed for dynamic scaling and fault tolerance across `us-east-1a` and `us-east-1b`.  
 
 
-  
+### Launch Template  
+
 <img width="1000" alt="Screenshot 2025-09-05 233904Launch-template" src="https://github.com/user-attachments/assets/02449136-b5e2-40ce-87e1-2080a1a84192" />   
 
-  
+### AutoScaling Group  
+
 <img width="1000" alt="Screenshot 2025-09-05 234104autoscaling-p1" src="https://github.com/user-attachments/assets/a38a281b-c90f-4331-84f4-2ef3957e3163" />  
 
-  
 <img width="1000" alt="Screenshot 2025-09-05 234207autoscaling-part2" src="https://github.com/user-attachments/assets/a36d73ec-dd67-4a82-89d6-db66c50e13ed" />  
 
   
