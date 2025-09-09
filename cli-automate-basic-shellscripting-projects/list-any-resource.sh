@@ -24,7 +24,7 @@
 #
 # The script will prompt the user to enter the AWS region and the service for which the resources need to be listed.
 #
-# Usage: ./aws_resource_list.sh  <aws_region> <aws_service>
+# Usage: ./list-any-resource.sh  <aws_region> <aws_service>
 
 
 #############################################################################
