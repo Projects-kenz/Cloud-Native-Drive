@@ -35,10 +35,6 @@
 
 ---
 
-<img width="1460" height="846" alt="Screenshot 2025-11-20 013444" src="https://github.com/user-attachments/assets/2f4a9a9a-a080-476d-bd6a-0536af1343e4" />
-
----
-
 <img width="1905" height="1072" alt="Screenshot 2025-11-20 013457" src="https://github.com/user-attachments/assets/10e0d079-61bd-47b6-bfc1-0927ef127fdf" />
 
 ---
