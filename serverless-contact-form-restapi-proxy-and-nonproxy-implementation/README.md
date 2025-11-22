@@ -1,4 +1,4 @@
-# Serverless Contact Form – Proxy & Non-Proxy API Gateway Implementation
+# SERVERLESS CONTACT FORM – Proxy & Non-Proxy API Gateway Implementation
 ---
 ## Proxy Integration Diagram  
 ![contact-form-diagram-Proxy-integration](https://github.com/user-attachments/assets/38126d9e-af31-4834-b68a-4e95f1ff0753)  
