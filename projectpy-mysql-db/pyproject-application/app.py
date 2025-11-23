@@ -8,7 +8,7 @@ import os
 
 # Create Flask app
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://username:password@localhost:3306/flaskdb'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://**REMOVED**:3306/flaskdb' #actually have to use as env /secrets etc.. , this is just for demo
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 db = SQLAlchemy(app)
@@ -133,4 +133,5 @@ if __name__ == '__main__':
             admin_user.set_password('admin123')
             db.session.add(admin_user)
             db.session.commit()
+
     app.run(host='0.0.0.0', port=5000, debug=True)
