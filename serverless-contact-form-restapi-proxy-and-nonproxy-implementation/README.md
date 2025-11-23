@@ -69,6 +69,6 @@ This project is a serverless contact form on AWS created to explore REST API Gat
 
 ---
 
-**** C K
+**Kenz Muhammed** C K
 GMAIL: kenzmuhammedc@gmail.com
 💼 Finding balance between clean infrastructure, useful automation, and real-world simplicity.
