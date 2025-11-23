@@ -8,7 +8,7 @@ import os
 
 # Create Flask app
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://**REMOVED**:3306/flaskdb' #actually have to use as env /secrets etc.. , this is just for demo
+app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('DATABASE_URL')
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 db = SQLAlchemy(app)
@@ -135,3 +135,4 @@ if __name__ == '__main__':
             db.session.commit()
 
     app.run(host='0.0.0.0', port=5000, debug=True)
+
