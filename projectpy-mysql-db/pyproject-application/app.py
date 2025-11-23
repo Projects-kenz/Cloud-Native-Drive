@@ -8,6 +8,7 @@ import os
 
 # Create Flask app
 app = Flask(__name__)
+app.config['SECRET_KEY'] = os.environ.get('SECRET_KEY', 'fallback-dev-key')
 app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('DATABASE_URL')
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
@@ -47,7 +48,7 @@ class SecureModelView(ModelView):
         return redirect(url_for('login'))
 
 # Initialize Flask-Admin
-admin = Admin(app, name='Dashboard', template_mode='bootstrap3')
+admin = Admin(app, name='Dashboard')
 admin.add_view(SecureModelView(User, db.session))
 
 # Routes
@@ -137,4 +138,5 @@ if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000, debug=True)
 else:
     application = app  # ← ADD ONLY THIS LINE FOR APACHE
+
 
