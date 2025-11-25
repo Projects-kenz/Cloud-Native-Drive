@@ -1,4 +1,4 @@
-# Deploying a Secure & Scalable Web Application on AWS
+# Deploying a Secure & Scalable VPC Architecture for Web Application 
 <img width="856" height="675" alt="image" src="https://github.com/user-attachments/assets/b81e73a3-aa20-4bba-b009-2987b5d7bffd" />
 
 
