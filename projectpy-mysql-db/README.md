@@ -18,9 +18,11 @@ The Flask app includes:
     >
     > I have gone through the Flask program **briefly** but not thoroughly, and I **do not have prior experience with Apache**. The UserData script in Terraform initially failed, so I manually connected via SSH from the Bastion to one of the servers, pasted the installation and configuration commands line by line into Notepad, and ran them successfully with guidance from GPT.  
     >
+    > I am Looking Forward to explore and learn its deployment on **Apache**, and I plan to experiment with **Nginx** soon to understand it better. 
+    > 
     > For the second server, I converted this into a shell script (recorded from Notepad) and executed it successfully. Installing Apache and configuring it was done **entirely with GPT’s help**.  
-    
-
+      
+  
 The app runs on **Apache + mod_wsgi** inside private EC2 instances, connected to **RDS MySQL**.
 
 ---
