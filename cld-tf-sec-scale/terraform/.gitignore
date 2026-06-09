@@ -1,0 +1,4 @@
+key.pem
+.terraform/
+variables.tf
+*.tfvars
